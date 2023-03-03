@@ -42,7 +42,7 @@ kayitlar=pd.read_excel("sonkayit.xlsx")
 
 a block of code that allows us to export images as base64 to shopify
 
-```
+``` python
 def imageyukleme(data,API_KEY,PASSWORD,SHOP_NAME):
     url = "https://%s:%s@%s.myshopify.com/admin/api/2022-10/products/%s/images.json" % (API_KEY, PASSWORD, SHOP_NAME,data[1])
     payload = {
@@ -97,7 +97,7 @@ If the product is not in shopify, we can register it to shopify with this functi
 
 code block where we update stocks
 
-``` 
+``` python
 def updateprod(data,API_KEY,PASSWORD,SHOP_NAME):
     url = "https://%s:%s@%s.myshopify.com/admin/api/2022-10/products/%s.json" % (API_KEY, PASSWORD, SHOP_NAME,data[1])
     payload = {
