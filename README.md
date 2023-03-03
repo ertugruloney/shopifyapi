@@ -8,7 +8,7 @@ If the product exists in the system, only the stock is updated.
 
 In the code block shown below, it allows it to connect to the shopify system and pull data from mssql.
 
-```
+``` python
 import mysql.connector as mysql
 import pandas as pd
 import requests
@@ -65,7 +65,7 @@ def imageyukleme(data,API_KEY,PASSWORD,SHOP_NAME):
 
 If the product is not in shopify, we can register it to shopify with this function.
 
- ``` 
+ ``` python
  def creat_product(url,data,b):
 
       payload = {
@@ -124,7 +124,7 @@ def updateprod(data,API_KEY,PASSWORD,SHOP_NAME):
 
 The main block of the code examines the records from sql and only updates the stock if it exists in shopify, otherwise it saves it to shopfiy.
 
-``` 
+``` python
 if len(kayitlar)==0:
     kayitlar=[]
     for i in myresult:
